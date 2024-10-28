@@ -47,14 +47,14 @@ export function NavBar() {
   }
 
   return (
-<div className="bg-black text-white p-4 z-50">
+<div className="bg-white text-black p-4 z-50 ">
   <div className="flex flex-wrap items-center justify-between">
     {/* Left Side - Jawabu Interiors */}
     <div className="flex items-center space-x-4">
       <h1 className="text-3xl font-extrabold lg:text-3xl">
         Web
       </h1>
-      <h1 className="text-3xl font-extrabold lg:text-3xl ml-4 text-green-500">
+      <h1 className="text-3xl font-extrabold lg:text-3xl ml-4 text-blue-500">
         Wave
       </h1>
       <h1 className="text-3xl font-extrabold text-white-500">
@@ -75,7 +75,7 @@ export function NavBar() {
         <NavigationMenuList className="flex space-x-4">
         <NavigationMenuItem>
             <Link href="/" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="hover:text-blue-500">
                 Home
               </NavigationMenuLink>
             </Link>
@@ -89,7 +89,7 @@ export function NavBar() {
           </NavigationMenuItem> */}
           <NavigationMenuItem>
             <Link href="/About" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="hover:text-blue-500">
                 About
               </NavigationMenuLink>
             </Link>
@@ -103,7 +103,7 @@ export function NavBar() {
           </NavigationMenuItem> */}
           <NavigationMenuItem>
             <Link href="/Contact" passHref>
-              <NavigationMenuLink className="hover:text-green-500">
+              <NavigationMenuLink className="hover:text-blue-500">
                 Contact
               </NavigationMenuLink>
             </Link>
@@ -127,7 +127,7 @@ export function NavBar() {
       <NavigationMenu>
         <NavigationMenuList className="flex flex-col items-center space-y-6 text-2xl">
           <NavigationMenuItem>
-            <Link href="/" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/" onClick={toggleMenu} className="hover:text-blue-500">
               Home
             </Link>
           </NavigationMenuItem>
@@ -137,7 +137,7 @@ export function NavBar() {
             </Link>
           </NavigationMenuItem> */}
           <NavigationMenuItem>
-            <Link href="/About" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/About" onClick={toggleMenu} className="hover:text-blue-500">
               About
             </Link>
           </NavigationMenuItem>
@@ -147,7 +147,7 @@ export function NavBar() {
             </Link>
           </NavigationMenuItem> */}
           <NavigationMenuItem>
-            <Link href="/Contact" onClick={toggleMenu} className="hover:text-green-500">
+            <Link href="/Contact" onClick={toggleMenu} className="hover:text-blue-500">
               Contact
             </Link>
           </NavigationMenuItem>
