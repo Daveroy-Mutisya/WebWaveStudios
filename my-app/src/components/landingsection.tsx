@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import { NavBar } from "./navbar";
 
 const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
   ssr: false,
@@ -396,7 +397,20 @@ export function LandingSection() {
 
   return (
     <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+      <div>
+        < NavBar />
+      </div>
+      <div>
+      <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
+            Web Wave Studios
+          </h2>
+          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+          A company dedicated to crafting your digital dreams, Web Wave Studios specializes in innovative web solutions that bring your vision to life. 
+          We blend creativity with cutting-edge technology to design websites that don’t just look stunning but engage, inspire, and grow with your business. 
+          From sleek, responsive layouts to powerful e-commerce platforms and immersive user experiences, our team is committed to delivering digital products that set you apart.
+          </p>
+      </div>
+      <div className="max-w-7xl mx-auto w-full  overflow-hidden h-full md:h-[40rem] px-4">
         <motion.div
           initial={{
             opacity: 0,
@@ -411,14 +425,6 @@ export function LandingSection() {
           }}
           className="div"
         >
-          <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
-            Web Wave Studios
-          </h2>
-          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
-          A company dedicated to crafting your digital dreams, Web Wave Studios specializes in innovative web solutions that bring your vision to life. 
-          We blend creativity with cutting-edge technology to design websites that don’t just look stunning but engage, inspire, and grow with your business. 
-          From sleek, responsive layouts to powerful e-commerce platforms and immersive user experiences, our team is committed to delivering digital products that set you apart.
-          </p>
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
         <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
