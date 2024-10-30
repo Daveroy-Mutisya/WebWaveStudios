@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { LandingSection } from "@/components/landingsection";
+import { LandingSection } from "@/components/globe";
 
 
 

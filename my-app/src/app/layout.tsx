@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("h-screen", fontSans.variable)}>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head />
       <body
         className={cn(

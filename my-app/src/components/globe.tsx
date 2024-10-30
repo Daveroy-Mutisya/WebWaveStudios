@@ -1,8 +1,12 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { NavBar } from "./navbar";
+import { div, section } from "framer-motion/client";
+import LandingSegment1 from "./lsegment1";
+
 
 const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
   ssr: false,
@@ -396,33 +400,29 @@ export function LandingSection() {
   ];
 
   return (
-    <div className="relative w-full h-screen dark:bg-black bg-white">
+    <>
+    <div>
     <NavBar />
-    
-    <div className="flex flex-col items-center justify-center py-20 h-full">
-      <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
-        WebWaveStudios
-      </h2>
-      <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
-        A company dedicated to crafting your digital dreams...
-      </p>
-    </div>
-  
-    <div className="max-w-7xl mx-auto w-full overflow-hidden h-full md:h-[40rem] px-4 relative">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="div"
-      />
-  
-      <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-  
-      <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-        <World data={sampleArcs} globeConfig={globeConfig} />
-      </div>
+  <section>
+    < LandingSegment1 />
+  </section>
+  <div className="max-w-7xl mx-auto w-full overflow-hidden h-full md:h-[40rem] px-4 relative">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="div"
+    />
+
+    <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+
+    <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+      <World data={sampleArcs} globeConfig={globeConfig} />
     </div>
   </div>
-  
+
+    </div>
+    </>
+
   );
 }

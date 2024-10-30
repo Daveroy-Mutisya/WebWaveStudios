@@ -47,7 +47,7 @@ export function NavBar() {
   }
 
   return (
-<div className="bg-white text-black p-4 z-50 ">
+<div className="text-white bg-black p-4 z-50 ">
   <div className="flex flex-wrap items-center justify-between">
     {/* Left Side - Jawabu Interiors */}
     <div className="flex items-center space-x-4">
